@@ -1,0 +1,18 @@
+% 1. Title: Bundesliga Spielprognose
+   % 
+   % 2. Sources:
+   %      (a) Creator: 
+   %      (b) Donor: 
+   %      (c) Date: 
+   % 
+   @RELATION spiel
+
+%Letzte Drei Spiele
+   @ATTRIBUTE tore  NUMERIC
+   @ATTRIBUTE gegentore NUMERIC
+%Letzte Fuenf Spiele
+   @ATTRIBUTE niederlagen   NUMERIC
+   @ATTRIBUTE steigungTore  NUMERIC
+   @ATTRIBUTE heimvorteil {heim,gast}
+   @ATTRIBUTE tag {montag,dienstag,mittwoch,donnerstag,freitag,samstag,sonntag}
+   @ATTRIBUTE class        {Sieg,Niederlage,Unentschieden}

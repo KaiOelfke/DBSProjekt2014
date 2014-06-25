@@ -1,0 +1,21 @@
+Also da ich leider nicht fertig geworden bin und du scheinbar nicht mehr in Skype bist schreibe ich jetzt eine kleine Anleitung was zu tun ist.
+
+Wir wollen eine Prognose haben. Also eine Art Programm, wo man gegebene Daten eingibt und wir eine Prognose mit einer gewissen Wahrscheinlichkeit bekommen. Die Idee dabei ist das man sich die bisherigen Daten anguckt und mit Statistik herausfindet, wenn ein Verein die letzten drei Spiele gewonnen hat gewinnen sie oft auch das nächste Spiel etc. Also man schaut sich an wie gewisse Eigenschaften / Attribute zu Sieg, Niederlage bzw. Unentschieden stehen. Ein einfaches Beispiel sind die Daten Größe, Gewicht, Geschlecht. Wenn man sehr viele Daten hat kann man relativ leicht herausfinden, dass Daten mit einem Gewicht unter X und einer Größe unter Y wohl eher zu einer Frau gehören. 
+
+Mehr dazu: http://www-ai.cs.uni-dortmund.de/LEHRE/VORLESUNGEN/KDD/SS13/FOLIEN/2biasVarianceDMV.de.pdf
+
+Dieses analysieren macht weka quasi automatisch für uns.
+
+http://www.cs.waikato.ac.nz/ml/weka/
+Tutorial: http://www.youtube.com/watch?v=m7kpIBGEdkI
+
+Weka benutzt ARFF Dateien (Attribute Relation File Format):
+http://www.cs.waikato.ac.nz/ml/weka/arff.html 
+
+Das ist sehr schön bei dem Link erklärt. Ich habe außerdem ein template "prognose.arff" erstellt. In der Datei sind erst die Attribute die wir angucken also bei dem Beispiel Größe, Gewicht, Geschlecht. Bei uns sind das dann Tore letzte 3 Spiele, Gegentore, Anzahl Niederlagen letzte 5, Steigung usw. wie es auch in dem PDF oder auf GITHUB steht. Wir sollen uns außerdem noch mehr Features überlegen. Sinnvolle Sachen sind halt irgendwelchen Eigenschaften, die sich auf die Wahrscheinlichkeit Sieg, Niederlage, Unentschieden usw auswirken.
+
+Als letztes kommt in ARFF der Datenblock, hier sind dann einfach alle Spiele mit den Daten also wieviele Tore der Verein gemacht hat usw. und ob er gewonnen hat. 
+
+Die Erstellung der Datei ist damit auch die Hauptarbeit für uns. Wir müssen SQL Queries und ein Java Programm schreiben, dass pro Spiel zwei Einträge macht (einmal pro Heim bzw. Gastsicht). Eine Variante wäre vlt einfach alle Spiele mit einer Query zu selectieren. Dann da iterieren und pro Spiel pro Verein Query bauen die die Attribute bestimmt und dann muss man halt eine Zeile in die ARFF schreiben und danach nochmal eine Zeile für den anderen Verein.
+
+Wenn wir diese ARFF Datei haben packen wir das in Weka rein, gehen auf Explorer, öffnen die Datei, dann Tab Classify, Choose Classifier -> Bayes -> Naive Bayes, dann noch das attribut unten über start auswählen nach dem wir klassifizieren sprich spielausgang (sieg, niederlage, unentschieden) -> start. Wir man die trainining sets macht weiß ich leider noch nicht.

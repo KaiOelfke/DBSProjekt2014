@@ -1,0 +1,15 @@
+1. Iteration:
+
+Nach der Gruppenfindung per Email von Nico [1] kommunizierten wir vorläufig über Email, teilten Aufgaben auf und die Ergebnisse kamen dann per Mail. Fabrice hat ein vorläufiges Schema und SQL Create Statements erstellt, welches ich dann zwei Stunden lang mit meinen Eltern (Dipl. Informatiker, aber nur TU Berlin nicht FU) besprochen habe. Das Ergebnis war, dass man in der Praxis alles anders machen würde als wir das lernen würden. Per Email haben wir dann demokratisch die Verbesserungen besprochen und uns auf einige wenige Änderungen geeinigt. 
+
+2. Iteration:
+
+Wir haben angefangen Github für die Versionskontrolle zu benutzen und Skype anstatt Emails. Das Datenbankschema haben wir anpassen müssen für den Datenimport und dann hat das auch funktioniert. Da wir beide keine Ahnung von weka, ARFF Dateien oder Klassifikatoren hatten betrieben wir etwas Recherche. Nach dem betrachten von [2] hatte ich einen ungefähren Überblick was weka ungefähr machen sollte. Dank [3] habe ich dann auch die Theorie dahinter verstanden und was man eigentlich mit Klassifikation in diesem Kontext meint. Verblieb also nur noch die Frage wie man jetzt aus den Daten so eine ARFF Datei macht und Ergebnisse in weka kriegt. Glücklicherweise hatte das Internet auch hier eine Antwort [4]. Leider reichte meine Zeit nicht mehr aus um alles zu implementieren, weswegen ich Fabrice versucht habe alles zu erklären. Dies scheiterte an dem Projektumweltfaktor Fußball was zu einer geringen Erreichbarkeit von Fabrice führte. Deswegen entschloss ich mich eine kleine Anleitung zu schreiben. Die war jedoch nicht verständlich genug und deswegen habe ich von [5] via Skype bei der Selbstladestation die offenen Fragen geklärt. 
+
+
+
+[1] http://www.nicolaslehmann.de 04.07.2014 17:13
+[2] http://www.youtube.com/watch?v=m7kpIBGEdkI&feature=kp 04.07.2014 17:17
+[3] http://www-ai.cs.uni-dortmund.de/LEHRE/VORLESUNGEN/KDD/SS13/FOLIEN/2biasVarianceDMV.de.pdf 17:22
+[4] http://www.cs.waikato.ac.nz/ml/weka/arff.html
+[5] http://de.wikipedia.org/wiki/Fusion_Festival
